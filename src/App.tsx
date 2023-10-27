@@ -40,13 +40,41 @@ function App() {
 
     const [autor, setAutor] = useState("");
 
-    const [anoPublicacao, setAnoPublicao] = useState("");
+    const [anoPublicacao, setAnoPublicacao] = useState(Number);
 
-    const [dataCadastro, setDataCadastro] = useState("");
+    const [dataCadastro, setDataCadastro] = useState(Number);
 
     const [genero, setGenero] = useState("");
 
     const [descricao, setDescricao] = useState("");
+
+    function adicionarLivro(event: any) {
+        event.preventDefault();
+        if (!id || !titulo || !autor || !anoPublicacao || !dataCadastro || !genero || !descricao) {
+            alert("Preencha todos os campos");
+            return;
+        }
+
+        const novoLivro = {
+            id: livros.length + 1,
+            titulo,
+            autor,
+            anoPublicacao,
+            dataCadastro,
+            genero,
+            descricao,
+        };
+
+        setLivros([...livros, novoLivro]);
+
+        setId(id);
+        setTitulo("");
+        setAutor("");
+        setAnoPublicacao(Number);
+        setDataCadastro(Number);
+        setGenero("");
+        setDescricao("");
+    }
 
     return (
         <div>
@@ -61,6 +89,18 @@ function App() {
                     <th>Gênero:</th>
                     <th>Descrição:</th>
                 </tr>
+                {livros.map((item) => {
+                    return (
+                        <tr>
+                            <td>{item.titulo}</td>
+                            <td>{item.autor}</td>
+                            <td>{item.anoPublicacao}</td>
+                            <td>{item.dataCadastro}</td>
+                            <td>{item.genero}</td>
+                            <td>{item.descricao}</td>
+                        </tr>
+                    );
+                })}
             </table>
         </div>
     );
