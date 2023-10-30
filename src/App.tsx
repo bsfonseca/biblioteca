@@ -81,6 +81,21 @@ function App() {
 
         setLivros(livrosAtualizados);
     }
+    function atualizarLivro(id: number) {
+        const livro = livros.find((item) => item.id == id);
+        if (!livro) {
+            alert("Livro inválido");
+            return;
+        }
+
+        //setId(id);
+        setTitulo(livro.titulo);
+        setAutor(livro.autor);
+        setAnoPublicacao(livro.anoPublicacao);
+        // setDataCadastro(livro.dataCadastro);
+        setGenero(livro.genero);
+        setDescricao(livro.descricao);
+    }
 
     return (
         <div>
