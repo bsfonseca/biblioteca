@@ -21,7 +21,7 @@ function App() {
             autor: "Aldous Huxley",
             anoPublicacao: 2010,
             dataCadastro: new Date(2011, 2, 10),
-            genero: "drama",
+            genero: "Drama",
             descricao: "Livro de drama comovente com histórias horripilantes",
         },
         {
@@ -30,7 +30,7 @@ function App() {
             autor: "Penny Hancock",
             anoPublicacao: 2010,
             dataCadastro: new Date(2012, 6, 11),
-            genero: "drama",
+            genero: "Drama",
             descricao: "Duas amigas, uma acusação e incontáveis consequências",
         },
     ]);
