@@ -40,3 +40,59 @@
 .read-the-docs {
     color: #888;
 }
+
+body {
+    background-color: black;
+    background-image: url(./assets/biblioteca.jpg);
+    opacity: 0.9;
+}
+
+#tabs-biblioteca {
+    background-color: #bbb;
+    color: #333;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #000000;
+}
+
+#tabs-biblioteca td {
+    padding: 4px 12px;
+}
+
+#form-biblioteca {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    position: relative;
+}
+
+#form-biblioteca > div > label {
+    display: block;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    box-shadow: 2px 2px 8px #000;
+    outline: none;
+}
+
+#form-submit {
+    width: 50%;
+    margin: auto;
+    margin-top: 12px;
+    box-shadow: 2px 2px 8px #000000;
+}
+
+.titulo {
+    font-family: "Edu TAS Beginner", sans-serif;
+    font-weight: 700;
+}
