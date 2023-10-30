@@ -88,11 +88,10 @@ function App() {
             return;
         }
 
-        //setId(id);
+        setId(id);
         setTitulo(livro.titulo);
         setAutor(livro.autor);
         setAnoPublicacao(livro.anoPublicacao);
-        // setDataCadastro(livro.dataCadastro);
         setGenero(livro.genero);
         setDescricao(livro.descricao);
     }
@@ -123,6 +122,35 @@ function App() {
                     );
                 })}
             </table>
+            <hr />
+
+            <form onSubmit={adicionarLivro}>
+                <h2>Adicione um novo livro</h2>
+                <div>
+                    <label>Título: </label>
+                    <input type="text" name="titulo" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                </div>
+                <div>
+                    <label>Autor: </label>
+                    <input type="text" name="autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+                <div>
+                    <label>Ano de Publicação: </label>
+                    <input type="date" name="data" value={anoPublicacao} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+                <div>
+                    <label>Data de Cadastro: </label>
+                    <input type="date" name="data" value={dataCadastro} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+                <div>
+                    <label>Gênero: </label>
+                    <input type="text" name="genero" value={genero} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+                <div>
+                    <label>Descrição: </label>
+                    <input type="text" name="genero" value={descricao} onChange={(e) => setAutor(e.target.value)} />
+                </div>
+            </form>
         </div>
     );
 }
