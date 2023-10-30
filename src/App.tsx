@@ -154,7 +154,7 @@ function App() {
     return (
         <div>
             <Morcego />
-            <h1 className="titulo">Biblioteca</h1>
+            <h1 className="titulo">Biblioteca mágica</h1>
 
             <table id="tabs-biblioteca">
                 <thead>
