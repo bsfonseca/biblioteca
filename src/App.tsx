@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
+import { Morcego } from "./components/Morcego";
 
 interface Livro {
     id: number;
@@ -152,6 +153,7 @@ function App() {
 
     return (
         <div>
+            <Morcego />
             <h1 className="titulo">Biblioteca</h1>
 
             <table id="tabs-biblioteca">
@@ -217,7 +219,7 @@ function App() {
                 </div>
                 <div>
                     <label>Descrição </label>
-                    <input type="text" name="genero" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                    <textarea name="genero" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
                 </div>
                 <div>
                     <label>Ano de Publicação </label>
