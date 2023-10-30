@@ -76,6 +76,12 @@ function App() {
         setDescricao("");
     }
 
+    function excluirLivro(id: number) {
+        const livrosAtualizados = livros.filter((item) => item.id != id);
+
+        setLivros(livrosAtualizados);
+    }
+
     return (
         <div>
             <h1>Biblioteca</h1>
